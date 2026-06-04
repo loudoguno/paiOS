@@ -1,0 +1,15 @@
+# Xcode / build
+build/
+buildw/
+build_dev/
+DerivedData/
+*.xcuserstate
+**/xcuserdata/
+*.xcworkspace/contents.xcworkspacedata.lock
+
+# Dev artifacts (not part of the product)
+_shots/
+tools/
+
+# macOS
+.DS_Store
