@@ -13,3 +13,6 @@ tools/
 
 # macOS
 .DS_Store
+
+# Signing (team/device-specific, re-downloadable from Apple Developer portal)
+signing/
