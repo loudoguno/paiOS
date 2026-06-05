@@ -158,7 +158,9 @@ private struct Histogram: View {
         return CGFloat(2 + (v % 7))
     }
     private func color(_ i: Int) -> Color {
-        let v = (i &* 2654435761 &+ seed) & 0xFF
+        // Hash math in explicit UInt32 so it's valid on watchOS (arm64_32, 32-bit Int)
+        // as well as iOS (arm64, 64-bit Int). 2654435761 (0x9E3779B1) exceeds Int32.max.
+        let v = Int((UInt32(truncatingIfNeeded: i) &* 2654435761 &+ UInt32(truncatingIfNeeded: seed)) & 0xFF)
         if v < 30 { return Theme.red }
         if v < 55 { return Theme.blue }
         return Theme.orange

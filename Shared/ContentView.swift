@@ -5,6 +5,12 @@ struct ContentView: View {
     @StateObject private var weather = LocationWeather()
     @State private var clock = Self.now()
 
+    #if os(iOS)
+    @StateObject private var intake = IssueIntake()
+    @State private var mode: TerminalMode = .agent
+    @State private var showSettings = false
+    #endif
+
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     var body: some View {
@@ -26,7 +32,20 @@ struct ContentView: View {
                     // ── input line / interrupt — the active row we keep in view
                     Group {
                         if engine.phase == .idle {
+                            #if os(iOS)
+                            VStack(alignment: .leading, spacing: 5) {
+                                TerminalModeToggle(mode: $mode, hasToken: intake.hasToken) {
+                                    intake.refreshToken(); showSettings = true
+                                }
+                                if mode == .issue {
+                                    IssuePromptBar(intake: intake)
+                                } else {
+                                    PromptBar(engine: engine)
+                                }
+                            }
+                            #else
                             PromptBar(engine: engine)
+                            #endif
                         } else {
                             InterruptBar(engine: engine)
                         }
@@ -51,6 +70,14 @@ struct ContentView: View {
             .onChange(of: engine.phase) { _, _ in
                 withAnimation { proxy.scrollTo("active", anchor: .bottom) }
             }
+            #if os(iOS)
+            .sheet(isPresented: $intake.showComposer) {
+                IssueComposerView(intake: intake)
+            }
+            .sheet(isPresented: $showSettings) {
+                TokenSettingsView(intake: intake)
+            }
+            #endif
         }
     }
 
