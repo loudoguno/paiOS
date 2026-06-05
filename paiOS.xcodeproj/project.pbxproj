@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0227D32195CDC484BAE96284 /* GitHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E328C9F96B2B208EDE27C3DE /* GitHubClient.swift */; };
+		057DC1AE4A45EB7775F33042 /* IssueIntake.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC696B5B629766455BBF874C /* IssueIntake.swift */; };
 		0A41761945CCB154F74EB0B2 /* phase-verify.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B2171AE7633CD27C82653C1 /* phase-verify.mp3 */; };
 		0B3B0ED5DA239B5889133B2B /* phase-observe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFC30878AD180719828F8A6C /* phase-observe.mp3 */; };
 		1B1004303DC92D57D65CE7E2 /* LocationWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5F047FF06431430168918 /* LocationWeather.swift */; };
@@ -33,6 +35,7 @@
 		BBC6949AC5EB68B71A765124 /* phase-interrupt.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 446C03CE359380E7B1D57542 /* phase-interrupt.mp3 */; };
 		C4BDB16D98DA0848273BCC6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D14292C23DA1DD48403F20 /* Assets.xcassets */; };
 		DFE00C13F5E54A0AE27312C7 /* LocationWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5F047FF06431430168918 /* LocationWeather.swift */; };
+		E1DB0259BAE97683BB52B5BC /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022263A94631BD5010726941 /* KeychainStore.swift */; };
 		E6036FB81A7FA8FC748DCE1C /* PAIEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460DFEFEE127C44041CC4B51 /* PAIEngine.swift */; };
 		ED293A1BE29AC6E3EFB186EC /* phase-learn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 614D4BEA72011486BDF58DE8 /* phase-learn.mp3 */; };
 		FA4A313C4CCBA1E0ADF8070F /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8F1C4513C97E5AB2AFF18A /* Connectivity.swift */; };
@@ -63,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		022263A94631BD5010726941 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		06F2B30B48C84B6DDC49E968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		09A620496D23A9E0AB81ED50 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0E43A0EBB025799002034666 /* PAIStatusLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAIStatusLine.swift; sourceTree = "<group>"; };
@@ -82,10 +86,12 @@
 		89820D0594EEDD2E53D10CAD /* paiOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "paiOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE77EDC4B180C85784DC39B /* phase-plan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "phase-plan.mp3"; sourceTree = "<group>"; };
 		A80B9B0395EBD497929981BA /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		AC696B5B629766455BBF874C /* IssueIntake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueIntake.swift; sourceTree = "<group>"; };
 		B064CA1F935D47A2A2E9E933 /* Intelligence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intelligence.swift; sourceTree = "<group>"; };
 		B3D14292C23DA1DD48403F20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8F1C4513C97E5AB2AFF18A /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		BF68934131C16AF9A06E83E6 /* PhoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneApp.swift; sourceTree = "<group>"; };
+		E328C9F96B2B208EDE27C3DE /* GitHubClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClient.swift; sourceTree = "<group>"; };
 		EFC30878AD180719828F8A6C /* phase-observe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "phase-observe.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,8 +152,11 @@
 		D0DF314B884B544A16A9C155 /* Phone */ = {
 			isa = PBXGroup;
 			children = (
+				E328C9F96B2B208EDE27C3DE /* GitHubClient.swift */,
 				34D82D6637D5781122777F38 /* Info.plist */,
 				B064CA1F935D47A2A2E9E933 /* Intelligence.swift */,
+				AC696B5B629766455BBF874C /* IssueIntake.swift */,
+				022263A94631BD5010726941 /* KeychainStore.swift */,
 				BF68934131C16AF9A06E83E6 /* PhoneApp.swift */,
 			);
 			path = Phone;
@@ -299,7 +308,10 @@
 				2F7CA52B4AB80A204817E8DD /* Connectivity.swift in Sources */,
 				696CF00278B8E34B80AD213D /* ContentView.swift in Sources */,
 				1FB4C7C7F8A7C70F69C04EFB /* Fallback.swift in Sources */,
+				0227D32195CDC484BAE96284 /* GitHubClient.swift in Sources */,
 				B6A625963852E56714E8D41F /* Intelligence.swift in Sources */,
+				057DC1AE4A45EB7775F33042 /* IssueIntake.swift in Sources */,
+				E1DB0259BAE97683BB52B5BC /* KeychainStore.swift in Sources */,
 				1B1004303DC92D57D65CE7E2 /* LocationWeather.swift in Sources */,
 				75C189237A9A023E38856A6E /* PAIEngine.swift in Sources */,
 				38E36553B71F210F4914DC15 /* PAIStatusLine.swift in Sources */,
